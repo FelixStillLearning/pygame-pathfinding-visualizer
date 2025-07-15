@@ -31,5 +31,5 @@ def handle_mouse_click(mouse_pos, grid, cell_size, grid_size, button):
             elif clicked_node.status == "start":
                 clicked_node.set_end ()
             elif clicked_node.status == "end":
-                clicked_node.set_end()
+                clicked_node.reset()
                 
