@@ -1,6 +1,6 @@
 # Pathfinding Visualizer
 
-Visualisasi algoritma pencarian jalur (BFS, DFS, A*, Dijkstra) pada grid. Cocok untuk belajar algoritma pencarian dasar dan visualisasinya.
+Visualisasi algoritma pencarian jalur (BFS, DFS, A*, Dijkstra) pada grid. 
 
 ## Struktur Folder
 - `src/` : Kode sumber Python
