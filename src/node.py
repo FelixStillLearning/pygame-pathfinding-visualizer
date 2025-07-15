@@ -32,6 +32,12 @@ class Node:
         pygame.draw.rect(window, color, (self.x, self.y, self.size, self.size))
         pygame.draw.rect(window, (200,200,200), (self.x, self.y, self.size, self.size), 1)
 
+    
+    
+
+            
+
+
 
     def set_start(self):
         self.status = "start"
@@ -42,4 +48,4 @@ class Node:
     def set_path(self):
         self.status = "path"
     def reset(self):
-        self,status = "empty"
+        self.status = "empty"
