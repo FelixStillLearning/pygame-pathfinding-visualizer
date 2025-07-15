@@ -1,6 +1,6 @@
 import pygame
 import sys  
-from grid import make_grid, draw_grid
+from grid import make_grid, draw_grid, get_clicked_node, handle_mouse_click
 from legend import draw_legend
 #inisialisasi pygame
 pygame.init()
@@ -21,10 +21,6 @@ pygame.display.set_caption(WINDOW_TITLE)
 font = pygame.font.Font(None, 24)
 
 grid = make_grid(ROWS, COLS, CELL_SIZE)
-grid[0][0].set_start()
-grid[0][1].set_end()
-grid[1][1].set_wall()
-grid[2][2].set_path()
 
 #Event Loop Dasar 
 running = True
@@ -33,10 +29,16 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_pos = pygame.mouse.get_pos()
+            handle_mouse_click(mouse_pos, grid, CELL_SIZE, GRID_SIZE, event.button)
+
     window.fill((255, 255, 255))
     draw_legend(window, font)
     draw_grid(window,grid)
     pygame.display.flip()
+
+        
 
 pygame.quit()
 sys.exit()

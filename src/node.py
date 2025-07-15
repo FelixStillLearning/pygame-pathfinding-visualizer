@@ -33,10 +33,17 @@ class Node:
         pygame.draw.rect(window, (200,200,200), (self.x, self.y, self.size, self.size), 1)
 
     
+    def toggle_wall(self):
+        if self.status == "empty":
+            self.status = "wall"
+        elif self.status == "wall":
+            self.status = "empty"
+
+    def is_empty(self):
+        return self.status == "empty"
     
-
-            
-
+    def is_wall(self):
+        return self.status == "wall"
 
 
     def set_start(self):
